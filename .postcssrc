@@ -1,0 +1,10 @@
+{
+  "plugins": {
+    "postcss-custom-properties": {},
+    "postcss-import": true,
+    "postcss-url": true,
+    "cssnano": {
+      "preset": "default"   
+    }
+  }
+}

@@ -1,0 +1,5 @@
+# Ignora las carpetas node_modules, src, el archivo package-lock.json, y la cache que genera Parcel
+node_modules
+src
+.parcel-cache
+package-lock.json
