@@ -27,7 +27,6 @@
     "terser": "^5.30.3"
   },
   "dependencies": {
-    "imagemin": "^9.0.0",
     "punycode": "^2.3.1"
   }
 }
