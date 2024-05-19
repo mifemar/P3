@@ -52,7 +52,7 @@ html {
 }
 
 .body1 {
-  background-image: url("portada.3dae3e2d.jpg");
+  background-image: url("portada-portrait.2959083c.webp");
   background-position: 50%;
   background-size: cover;
   flex-direction: column;
@@ -61,12 +61,8 @@ html {
   display: flex;
 }
 
-i {
+em {
   font-style: italic;
-}
-
-b {
-  font-weight: bolder;
 }
 
 strong {
@@ -74,7 +70,7 @@ strong {
 }
 
 header {
-  background-image: url("header.cb9b7078.jpg");
+  background-image: url("header.fa76be4f.webp");
   background-size: cover;
 }
 
@@ -105,6 +101,7 @@ nav a {
   text-transform: uppercase;
   font-size: 1.5rem;
   text-decoration: none;
+  transition: color .5s;
 }
 
 nav a:hover {
@@ -187,6 +184,10 @@ main h3 {
   width: 100%;
 }
 
+.main2 .articles img {
+  clip-path: ellipse(300px 450px);
+}
+
 .main2 figcaption {
   text-align: center;
   margin: .25rem 0 0;
@@ -208,12 +209,14 @@ main h3 {
   padding: .8rem;
   font-size: 1.25rem;
   text-decoration: none;
+  transition: transform .3s, background-color .5s ease-out;
   display: inline-block;
 }
 
 .btn:hover, button:hover {
   background-color: red;
   background-color: var(--hover-color);
+  transform: scale(1.1);
 }
 
 label, legend {
@@ -261,6 +264,56 @@ ul li {
   margin: 1rem 0;
 }
 
+.chosen a {
+  display: inline-block;
+  position: relative;
+}
+
+.youtube {
+  animation: 3s ease-in-out infinite logoAnimation;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes logoAnimation {
+  0% {
+    opacity: .1;
+  }
+
+  50% {
+    opacity: .9;
+  }
+
+  to {
+    opacity: .1;
+  }
+}
+
+.girlfriends {
+  text-align: center;
+  flex-direction: row;
+  display: flex;
+}
+
+.girlfriends img {
+  --_m: radial-gradient(#000 69%, #0000 70%) 84.5% / 50%;
+  -webkit-mask-box-image: var(--_m);
+  clip-path: polygon(-42% 0, 50% 91%, 142% 0);
+  mask-border: radial-gradient(#000 69%, #0000 70%) 84.5% / 50%;
+  mask-border: var(--_m);
+  width: 75%;
+}
+
+@supports not ((-webkit-mask-box-image: var(--_m ))) {
+  img {
+    --_m: radial-gradient(at 70% 31%, var(--c) 29%, #0000 30%), radial-gradient(at 30% 31%, var(--c) 29%, #0000 30%), linear-gradient(#000 0 0) bottom / 100% 50% no-repeat;
+    -webkit-mask: var(--_m);
+    mask: var(--_m);
+  }
+}
+
 ol li {
   margin: 1.5rem 0 2.5rem 2rem;
   list-style-type: number;
@@ -271,12 +324,18 @@ ol li {
   height: 1rem;
 }
 
-footer, footer a {
+footer {
   color: var(--link-color);
 }
 
+footer img {
+  width: 12.5vw;
+}
+
 footer a {
+  color: var(--link-color);
   text-decoration: none;
+  transition: color .5s;
 }
 
 footer a:hover {
@@ -307,18 +366,20 @@ footer p {
 .footer2 {
   background-color: #070e58;
   background-color: var(--main-color);
-  padding-left: 15%;
+  text-align: center;
+  flex-direction: column;
+  display: flex;
 }
 
-.footer2 ul {
-  justify-content: start;
+.footer2 img {
+  padding-top: .75rem;
 }
 
 .footer2 ul li {
-  padding: 1rem .5rem .25rem;
+  padding: .25rem .5rem;
 }
 
-@media (width <= 992px) and (orientation: portrait) {
+@media (width <= 1920px) and (orientation: portrait) {
   .nav1 {
     height: 7.5vh;
     margin-top: .5vh;
@@ -362,14 +423,18 @@ footer p {
   }
 }
 
-@media (width <= 992px) and (orientation: landscape) {
+@media (width <= 1920px) and (orientation: landscape) {
   .body1 {
-    background-image: url("portada2.7e57cca9.jpg");
+    background-image: url("portada-fullhd.f955a906.webp");
     background-size: cover;
     flex-direction: column;
     height: 100vh;
     font-weight: 700;
     display: flex;
+  }
+
+  .main2 .articles img {
+    clip-path: ellipse(150px 250px);
   }
 
   .articles {
@@ -430,9 +495,9 @@ footer p {
   }
 }
 
-@media (width >= 993px) {
+@media (width >= 1921px) {
   .body1 {
-    background-image: url("portada2.7e57cca9.jpg");
+    background-image: url("portada-4k.6385bc41.webp");
     background-size: cover;
     flex-direction: column;
     height: 100vh;
@@ -448,6 +513,10 @@ footer p {
   .main2 > * {
     width: 80%;
     margin: 0 auto 1.5rem;
+  }
+
+  .main2 .articles img {
+    clip-path: ellipse(150px 250px);
   }
 
   .articles {
