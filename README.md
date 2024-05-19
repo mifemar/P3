@@ -2,6 +2,3 @@
 
 mfernandezmarti@uoc.edu
 Miguel Fernández Martín
-
-# Pasos a seguir
-
