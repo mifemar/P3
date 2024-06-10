@@ -178,6 +178,7 @@ main h3 {
 }
 .main2 img {
 	width: 100%;
+	height: 100%;
 }
 .main2 .articles img {
 	clip-path: ellipse(300px 450px at center);
@@ -259,6 +260,8 @@ ul li {
 .chosen a {
 	position: relative;
   	display: inline-block;
+	width: 100%;
+	height: 100%;
 }
 .youtube {
 	position: absolute;
@@ -361,20 +364,18 @@ footer p {
 
 @media (max-width: 1920px) and (orientation: portrait) {
 	.nav1 {
+		width: 95%;
 		height: 7.5vh;
 		margin-top: 0.5vh;
 	}
-	nav a {
-		font-size: 2rem;
+	nav a, .nav2 a {
+		font-size: 0.75rem;
 	}
 	.nav2 {
-		width: 70%;
+		width: 95%;
 	}
 	.nav2 img {
 		width: 30vw;
-	}
-	.nav2 a {
-		font-size: 1.5rem;
 	}
 	.main1 {
 		height: 95vh;
@@ -383,10 +384,7 @@ footer p {
 		height: 50%;
 		width: 50%;
 	}
-	footer a {
-		font-size: 1.5rem;
-	}
-	.footer1 p > a {
+	footer a, .footer1 p > a {
 		font-size: 0.75rem;
 	}
 	.footer2 p {
@@ -499,6 +497,7 @@ footer p {
 	.grid-pr-item2 {
 		grid-area: area2;
 		margin: auto 0;
+		padding-top: 2rem;
 	}
 	.grid-pr-item3 {
 		grid-area: area4;
@@ -507,6 +506,7 @@ footer p {
 	.grid-pr-item4 {
 		grid-area: area3;
 		margin: auto 0;
+		padding-top: 2rem;
 	}
 	.grid-pr-item5 {
 		grid-area: area5;
@@ -515,6 +515,7 @@ footer p {
 	.grid-pr-item6 {
 		grid-area: area6;
 		margin: auto 0;
+		padding-top: 2rem;
 	}
 	.grid-pr-item7 {
 		grid-area: area8;
@@ -523,6 +524,7 @@ footer p {
 	.grid-pr-item8 {
 		grid-area: area7;
 		margin: auto 0;
+		padding-top: 2rem;
 	}
 	.chosen {
 		height: 30%;
