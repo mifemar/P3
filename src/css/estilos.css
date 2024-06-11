@@ -309,6 +309,9 @@ ul li {
 .girlfriends {
 	display: flex;
 	flex-direction: row;
+	justify-content: space-around;
+}
+.girlfriends picture {
 	text-align: center;
 }
 .girlfriends img {
