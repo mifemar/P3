@@ -93,7 +93,7 @@ header {
 
 .nav1 {
 	height: 10vh;
-	margin-top: 1vh;
+	margin: 1vh auto 0;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -366,7 +366,6 @@ footer p {
 	.nav1 {
 		width: 95%;
 		height: 7.5vh;
-		margin-top: 0.5vh;
 	}
 	nav a, .nav2 a {
 		font-size: 0.75rem;
