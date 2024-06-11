@@ -32,10 +32,12 @@ document.addEventListener('DOMContentLoaded', () => {
         isVibrating = false;
     });
     
-    // Función para mostrar un mensaje de agradecimiento al enviar el formulario de la newsletter
-    document.getElementById('newsletter-form').addEventListener('submit', (event) => {
-        //event.preventDefault();
-        alert('¡Muchas gracias por suscribirte a nuestra newsletter!');
-        document.getElementById('newsletter-form').submit();
-    });
+    if (window.location.pathname.endsWith('presentacion.html')) {
+        // Función para mostrar un mensaje de agradecimiento al enviar el formulario de la newsletter
+        document.getElementById('newsletter-form').addEventListener('submit', (event) => {
+            //event.preventDefault();
+            alert('¡Muchas gracias por suscribirte a nuestra newsletter!');
+            document.getElementById('newsletter-form').submit();
+        });
+    }
 });
